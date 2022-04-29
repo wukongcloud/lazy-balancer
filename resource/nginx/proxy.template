@@ -76,6 +76,9 @@ server {
 
     root /usr/share/nginx/html;
 
+    proxy_read_timeout 3600s;
+    proxy_send_timeout 3600s;
+    
     ssl_certificate {{ proxy.ssl_cert_path }};
     ssl_certificate_key {{ proxy.ssl_key_path }};
 
